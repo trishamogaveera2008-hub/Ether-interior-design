@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ETHER — Turn your empty space into your dream space</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<div class="splash" id="splash" role="img" aria-label="ETHER logo">
+  <div class="art"><i class="cl"></i><i class="s1"></i><i class="s2"></i><i class="lt l1"></i><i class="lt l2"></i><i class="lt l3"></i><i class="lt l4"></i><i class="lt l5"></i>
+  <p class="tag">Turn your empty space into your dream space.</p></div>
+  <button class="skip" id="skip">Skip</button>
+</div>
+
+<div class="site">
+  <nav>
+    <a class="brand" href="#top" id="brandMark"><span class="mark" aria-hidden="true"></span>ether</a>
+    <div class="links">
+      <a class="l" href="#features">Features</a>
+      <a class="l" href="#features">Explore ETHER</a>
+      <button class="btn p sm" data-start>Start Designing</button>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div>
+      <h1 class="pop" style="--i:0">Build Your Dream Space.</h1>
+      <p class="pop" style="--i:1">Design, plan and customize your space with intelligent interior tools and AI-powered suggestions.</p>
+      <div class="cta pop" style="--i:2">
+        <button class="btn p" data-start>Start Designing →</button>
+        <a class="btn s" href="#features">Explore ETHER</a>
+      </div>
+    </div>
+    <div class="visual pop" style="--i:3">
+      <span class="chip a">✦ ETHER AI suggests a wider walkway</span>
+      <svg viewBox="0 0 400 360" aria-label="Isometric pastel home">
+        <path d="M200 300 L40 210 L200 120 L360 210Z" fill="#fff" opacity=".7"/>
+        <path d="M40 210 L40 120 L200 30 L200 120Z" fill="#dfe8ff"/>
+        <path d="M200 30 L360 120 L360 210 L200 120Z" fill="#f4dcf3"/>
+        <path d="M200 300 L40 210 L40 224 L200 314 L360 224 L360 210Z" fill="#c7bdf2"/>
+        <path d="M200 30 L40 120 L200 210 L360 120Z" fill="#ffe6d6"/>
+        <path d="M200 210 L360 120 L360 210 L200 300Z" fill="#c9e6ff" opacity=".85"/>
+        <path d="M200 210 L40 120 L40 210 L200 300Z" fill="#e8dcff" opacity=".85"/>
+        <path d="M110 190 L150 168 L190 190 L150 212Z" fill="#f9c9dd"/>
+        <path d="M110 190 L150 212 L150 224 L110 202Z" fill="#f0a9c7"/>
+        <path d="M250 180 L290 158 L320 175 L280 197Z" fill="#b9a7f0"/>
+        <path d="M250 180 L280 197 L280 208 L250 191Z" fill="#9c88e0"/>
+        <rect x="70" y="150" width="34" height="46" rx="4" fill="#fff" opacity=".8" transform="skewY(30) translate(0,-42)"/>
+        <circle cx="235" cy="238" r="12" fill="#c6f0dc"/><rect x="232" y="240" width="6" height="18" rx="3" fill="#9adcbc"/>
+      </svg>
+      <span class="chip b">✓ Smart Fit: everything fits</span>
+    </div>
+  </header>
+
+  <section class="feat" id="features">
+    <h2>One home. Every room. Always in sync.</h2>
+    <p>ETHER turns real dimensions into a plan you can see, walk through and cost out before you build.</p>
+    <div class="grid">
+      <div class="card t1"><i>📐</i><h3>Design Your Space</h3><p>Create accurate rooms and complete homes using real dimensions.</p></div>
+      <div class="card t2"><i>🛋️</i><h3>Arrange Everything</h3><p>Place furniture and objects using intelligent spatial planning.</p></div>
+      <div class="card t3"><i>🧭</i><h3>Know Your Space</h3><p>Understand floor area, occupied space, walking space and clearances.</p></div>
+      <div class="card t4"><i>✦</i><h3>Let AI Help</h3><p>Use ETHER AI to design, explain and improve your layout.</p></div>
+      <div class="card t5"><i>🏠</i><h3>Visualize Your Idea</h3><p>Explore your design in realistic 3D.</p></div>
+      <div class="card t6"><i>✓</i><h3>Design Before You Buy</h3><p>Check whether furniture fits and estimate approximate costs before purchasing.</p></div>
+    </div>
+  </section>
+  <p class="note">Planning, visualization and approximate estimation only. ETHER does not provide structural, electrical, plumbing or building-code approval.</p>
+  <footer>Design it. Plan it. Visualize it. Build it.</footer>
+</div>
+
+<dialog id="dlg" aria-labelledby="dt">
+  <div class="mb">
+    <h2 id="dt">What do you want to design?</h2>
+    <p>Pick a space. You can add more rooms to the same project later.</p>
+    <div class="rooms" id="rooms"></div>
+    <div class="row">
+      <button class="btn p sm" id="go">Continue</button>
+      <button class="btn s sm" id="empty">Start Empty</button>
+      <button class="btn s sm" id="ideas">Give Me Ideas</button>
+      <button class="btn s sm" id="close" style="margin-left:auto">Close</button>
+    </div>
+    <div class="status" id="status" role="status"></div>
+  </div>
+</dialog>
+
+<div id="ed"><div class="tb">
+<button id="eHome">← Home</button><input type="text" id="eName" aria-label="Project name">
+<button id="eUndo">Undo</button><button id="eRedo">Redo</button><button id="eSave">Save</button>
+<button class="seg" id="e2d">2D plan</button><button class="seg" id="e3d">3D view</button><span class="tag2" title="Textured 3D viewport">◆ Textured 3D</span><button id="eReset">Reset view</button><button id="eFront" title="Front view">Front</button><button id="eTop" title="Top view">Top</button><button id="eIso" title="Perspective-style isometric view">Iso</button>
+<label class="tag2" title="Lowers the walls nearest the camera so you can see inside"><input type="checkbox" id="eCut" checked> Cutaway walls</label><label class="tag2"><input type="checkbox" id="eGrid" checked> Grid</label><label class="tag2"><input type="checkbox" id="eMeas" checked> Measurements</label>
+<span style="flex:1"></span><button id="xJson">Export project</button><button id="xCsv">Shopping list</button><button id="xPng">Save image</button></div>
+<div class="wk"><div class="pn" id="pl"></div><div class="cw"><canvas id="cv"></canvas><div class="hint" id="hint"></div></div><div class="pn r" id="pr"></div></div></div>
+<div id="toast" role="status"></div>
+
+  <script src="js/app.js" defer></script>
+
+</body>
+</html>
